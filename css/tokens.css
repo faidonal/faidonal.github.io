@@ -1,0 +1,85 @@
+/* Portfolio tokens: change a value here and every page updates. */
+/* ITC Cheltenham Std Light (licensed).
+   One weight is served for every serif weight, so all serif text renders in Light. */
+@font-face {
+  font-family: "Cheltenham";
+  src: url("../assets/fonts/CheltenhamStdLight.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Cheltenham";
+  src: url("../assets/fonts/CheltenhamStdLightItalic.otf") format("opentype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Ink and text */
+  --ink: #1e1410; /* headings, nav, lines */
+  --text-body: #2a1d16; /* case study paragraphs */
+  --text-soft: #3a2c24; /* home descriptions, labels */
+  --muted: #6b5446; /* small captions, meta labels */
+  --muted-2: #5c4a3e; /* quieter captions */
+
+  /* Accents */
+  --accent: #c84508; /* orange text accent, highlighted diagram boxes */
+  --accent-bright: #f7964b; /* name star, link hover */
+  --accent-hero: #d95000; /* hero background, buttons */
+  --rust: #8f2f0b; /* friction notes in diagrams */
+
+  /* Status */
+  --live-text: #1f5a2e;
+  --live-dot: #2da556;
+
+  /* Surfaces */
+  --paper: #faf8f4; /* home page background */
+  --panel: #fbf4ec; /* diagram panels, boxes */
+  --rule: #d9c6b4; /* dividers */
+  --tint-material: #f3e4d3;
+  --tint-crewcast: #f0dcd2;
+  --tint-cabincrew: #eee4d2;
+  --tint-helios: #e7e4d6;
+
+  /* Type */
+  --font-sans: "Archivo", system-ui, sans-serif;
+  --font-serif:
+    "Cheltenham", "Newsreader", Georgia, serif; /* was 'Newsreader', Georgia, serif */
+  --w-light: 300;
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-bold: 600;
+
+  /* Type scale: even sizes on the Tailwind default scale (14, 16, 18, 20, 24, 36, 48, 60, 72).
+     Headings scale with the screen and reach their largest size at 1440px wide. */
+  --fs-display: clamp(48px, 5vw, 72px); /* project names on home cards */
+  --fs-h1: clamp(
+    36px,
+    4.1667vw,
+    60px
+  ); /* page titles, home statement, outcome figures */
+  --fs-h2: clamp(
+    30px,
+    3.3333vw,
+    48px
+  ); /* section headings, quotes, big numbers */
+  --fs-h3: clamp(24px, 2.5vw, 36px); /* closing line, card numbers */
+  --fs-statement: 24px; /* contact links on home */
+  --fs-body: 20px; /* case study paragraphs, intro */
+  --fs-large: 18px; /* nav links, back link, serif notes */
+  --fs-small: 16px; /* header bar, buttons, descriptions, diagram boxes, meta */
+  --fs-caption: 14px; /* tags, image captions, status, tooltips */
+
+  /* Line heights */
+  --lh-tight: 1.1; /* display and page titles */
+  --lh-heading: 1.2; /* section headings, quotes */
+  --lh-ui: 1.5; /* labels, captions, diagram text */
+  --lh-body: 1.6; /* reading paragraphs */
+}
+
+/* Text that sets no size of its own falls back to the small size, never the browser's 16px. */
+body {
+  font-size: var(--fs-small);
+}
